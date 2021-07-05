@@ -1,39 +1,29 @@
 {
+  "name": "@squonk/mui-theme",
+  "version": "1.0.0-dev.0",
+  "description": "Material-UI theme used on Squonk products",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "repository": "github:InformaticsMatters/react-sci-components",
   "license": "Apache-2.0",
   "private": false,
-  "version": "1.0.0-dev.1",
-  "contributors": [
-    "Oliver Dudgeon <odudgeon@informaticsmatters.com>",
-    "Tim Dudgeon <tdudgeon@informaticsmatters.com> (https://informaticsmatters.com)"
-  ],
-  "repository": "github:InformaticsMatters/react-sci-components",
-  "bugs": "https://github.com/InformaticsMatters/react-sci-components/issues",
-  "homepage": "https://github.com/InformaticsMatters/react-sci-components/",
+  "homepage": "https://github.com/InformaticsMatters/squonk-react-mui-theme/",
   "keywords": [
     "react",
     "material-ui"
   ],
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "lint": "tsdx lint src",
-    "prepare": "tsdx build"
+    "build": "tsup",
+    "start": "tsup --watch",
+    "type-check": "tsc --pretty --noEmit",
+    "release": "release-it",
+    "prepublish": "tsup"
   },
   "peerDependencies": {
     "react": ">=17",
     "styled-components": "^5.2.3"
   },
-  "name": "@squonk/mui-theme",
-  "module": "dist/theme.esm.js",
   "devDependencies": {
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
@@ -49,11 +39,17 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.0",
-    "tsdx": "^0.14.1",
     "tslib": "^2.3.0",
-    "typescript": "^4.3.5"
+    "tsup": "^4.12.0",
+    "typescript": "^4.3.5",
+    "release-it": "^14.10.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    }
   }
 }
