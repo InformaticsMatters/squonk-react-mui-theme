@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "tsup",
-    "husky"
+    "husky",
+    "dependencies"
   ]
 }
