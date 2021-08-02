@@ -1,6 +1,6 @@
 {
   "name": "@squonk/mui-theme",
-  "version": "1.0.0-dev.1",
+  "version": "1.0.0-dev.2",
   "description": "Material-UI theme used on Squonk products",
   "type": "module",
   "main": "dist/index.cjs",
