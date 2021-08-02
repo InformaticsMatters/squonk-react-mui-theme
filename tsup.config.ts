@@ -7,5 +7,5 @@ export const tsup: Options = {
   sourcemap: true,
   clean: true,
   format: ['esm', 'cjs'],
-  entryPoints: ['src/index.tsx'],
+  entryPoints: ['src/index.ts', 'src/emotion-provider.tsx', 'src/styled-components-provider.tsx'],
 };

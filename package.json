@@ -2,8 +2,9 @@
   "name": "@squonk/mui-theme",
   "version": "1.0.0-dev.1",
   "description": "Material-UI theme used on Squonk products",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "repository": "github:InformaticsMatters/react-sci-components",
   "license": "Apache-2.0",
@@ -23,10 +24,14 @@
     "lint": "eslint . --fix"
   },
   "peerDependencies": {
-    "react": ">=17",
+    "@emotion/react": "^11.4.0",
+    "@material-ui/core": "^4.12.2",
+    "react": ">=16",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "@emotion/react": "^11.4.0",
+    "@material-ui/core": "^4.12.2",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.11",
@@ -37,8 +42,10 @@
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.1",
+    "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "release-it": "^14.10.1",
@@ -46,9 +53,6 @@
     "tslib": "^2.3.0",
     "tsup": "^4.12.5",
     "typescript": "^4.3.5"
-  },
-  "dependencies": {
-    "@material-ui/core": "^4.12.2"
   },
   "lint-staged": {
     "*.@(js|ts|tsx)": [
@@ -59,5 +63,8 @@
     "git": {
       "commitMessage": "chore: release v${version}"
     }
+  },
+  "dependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

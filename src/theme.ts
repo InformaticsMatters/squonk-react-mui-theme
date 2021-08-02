@@ -1,10 +1,4 @@
-import React from 'react';
-
-import {
-  createMuiTheme,
-  StylesProvider,
-  ThemeProvider as MuiThemeProvider,
-} from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import shadows from '@material-ui/core/styles/shadows';
 
@@ -12,7 +6,7 @@ const family = ['"Open Sans"', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif'].join
 
 const breakpoints = createBreakpoints({});
 
-export const theme = createMuiTheme({
+export const theme = createTheme({
   palette: {
     common: {
       black: '#000',
@@ -112,12 +106,4 @@ export const theme = createMuiTheme({
   },
 });
 
-export const MuiTheme: React.FC = ({ children }) => {
-  return (
-    <StylesProvider injectFirst>
-      <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
-    </StylesProvider>
-  );
-};
-
-export default MuiTheme;
+export default theme;

@@ -1,0 +1,6 @@
+{
+  "module": "../dist/emotion-provider.js",
+  "main": "../dist/emotion-provider.cjs",
+  "types": "../dist/emotion-provider.d.ts",
+  "sideEffects": false
+}
