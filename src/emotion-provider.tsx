@@ -3,12 +3,7 @@ import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 
 import { MuiTheme } from './mui-theme';
-import { theme } from './theme';
 
-export const Theme: React.FC = ({ children }) => {
-  return (
-    <MuiTheme>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </MuiTheme>
-  );
+export const EmotionMuiThemeProvider: React.FC = ({ children }) => {
+  return <MuiTheme>{(theme) => <ThemeProvider theme={theme}>{children}</ThemeProvider>}</MuiTheme>;
 };

@@ -6,14 +6,13 @@ const family = ['"Open Sans"', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif'].join
 
 const breakpoints = createBreakpoints({});
 
-export const theme = createTheme({
+const commonThemeOptions = {
   palette: {
     common: {
       black: '#000',
       white: 'rgba(236, 240, 241, 1)',
     },
     background: {
-      paper: '#fff',
       default: '#fafafa',
     },
     primary: {
@@ -33,12 +32,6 @@ export const theme = createTheme({
       main: '#cc7013',
       dark: '#c15b0f',
       contrastText: '#fff',
-    },
-    text: {
-      primary: 'rgba(0, 0, 0, 0.87)',
-      secondary: 'rgba(0, 0, 0, 0.54)',
-      disabled: 'rgba(0, 0, 0, 0.38)',
-      hint: 'rgba(0, 0, 0, 0.38)',
     },
     success: {
       light: '#5efc82',
@@ -99,6 +92,7 @@ export const theme = createTheme({
       arrow: true,
     },
   },
-});
+};
 
-export default theme;
+export const darkTheme = createTheme({ palette: { type: 'dark' } }, commonThemeOptions);
+export const lightTheme = createTheme({ palette: { type: 'light' } }, commonThemeOptions);
