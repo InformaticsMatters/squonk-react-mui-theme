@@ -4,5 +4,8 @@
     "husky",
     "dependencies",
     "providers"
+  ],
+  "cSpell.words": [
+    "tsup"
   ]
 }
