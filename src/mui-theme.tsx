@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import React from 'react';
 
-import { useMediaQuery } from '@material-ui/core';
+import { CssBaseline, useMediaQuery } from '@material-ui/core';
 import type { Theme } from '@material-ui/core/styles';
 import { StylesProvider, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 
@@ -18,6 +18,7 @@ export const MuiTheme = ({ children }: MuiThemeProps) => {
 
   return (
     <StylesProvider injectFirst>
+      <CssBaseline />
       <MuiThemeProvider theme={theme}>
         {typeof children === 'function' ? children(theme) : children}
       </MuiThemeProvider>
