@@ -48,11 +48,6 @@ export const theme = createTheme({
     },
   },
   overrides: {
-    MuiPopover: {
-      paper: {
-        padding: 8,
-      },
-    },
     MuiAppBar: {
       root: {
         boxShadow: shadows[1],
