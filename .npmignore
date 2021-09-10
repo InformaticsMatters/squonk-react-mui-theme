@@ -1,0 +1,9 @@
+!dist
+.eslintrc.json
+
+*.log
+.DS_Store
+
+tsup.config.ts
+.github
+.vscode
