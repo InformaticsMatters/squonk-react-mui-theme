@@ -16,11 +16,11 @@
     "material-ui"
   ],
   "scripts": {
-    "build": "tsup",
-    "start": "tsup --watch",
+    "build": "tsup-node",
+    "start": "tsup-node --watch",
     "type-check": "tsc --pretty --noEmit",
     "release": "release-it",
-    "prepublish": "tsup",
+    "prepublish": "tsup-build",
     "prepare": "husky install",
     "lint": "eslint . --fix"
   },
