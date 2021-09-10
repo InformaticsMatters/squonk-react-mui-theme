@@ -1,5 +1,6 @@
 !dist
 .eslintrc.json
+.eslintignore
 
 *.log
 .DS_Store
