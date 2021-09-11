@@ -19,7 +19,7 @@
     "build": "tsup",
     "start": "tsup --watch",
     "type-check": "tsc --pretty --noEmit",
-    "release": "release-it",
+    "release": "tsup && release-it",
     "prepublish": "tsup",
     "prepare": "husky install",
     "lint": "eslint . --fix"
