@@ -10,9 +10,6 @@ export const generateThemes = () => {
         black: '#000',
         white: 'rgba(236, 240, 241, 1)',
       },
-      background: {
-        default: '#fafafa',
-      },
       primary: {
         light: 'rgba(255, 125, 102, 1)',
         main: 'rgba(229, 74, 59, 1)',
@@ -92,7 +89,17 @@ export const generateThemes = () => {
     },
   };
   const darkTheme = createTheme({ palette: { type: 'dark' } }, commonThemeOptions);
-  const lightTheme = createTheme({ palette: { type: 'light' } }, commonThemeOptions);
+  const lightTheme = createTheme(
+    {
+      palette: {
+        type: 'light',
+        background: {
+          default: '#fafafa',
+        },
+      },
+    },
+    commonThemeOptions,
+  );
 
   return { darkTheme, lightTheme };
 };
