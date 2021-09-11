@@ -7,7 +7,7 @@
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "sideEffects": false,
-  "repository": "github:InformaticsMatters/react-sci-components",
+  "repository": "github:InformaticsMatters/squonk-react-mui-theme",
   "license": "Apache-2.0",
   "private": false,
   "homepage": "https://github.com/InformaticsMatters/squonk-react-mui-theme/",
