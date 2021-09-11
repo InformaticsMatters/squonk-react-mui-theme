@@ -6,10 +6,6 @@ export const generateThemes = () => {
 
   const commonThemeOptions = {
     palette: {
-      common: {
-        black: '#000',
-        white: 'rgba(236, 240, 241, 1)',
-      },
       primary: {
         light: 'rgba(255, 125, 102, 1)',
         main: 'rgba(229, 74, 59, 1)',
