@@ -1,6 +1,0 @@
-{
-  "module": "../dist/styled-components-provider.js",
-  "main": "../dist/styled-components-provider.cjs",
-  "types": "../dist/styled-components-provider.d.ts",
-  "sideEffects": false
-}
