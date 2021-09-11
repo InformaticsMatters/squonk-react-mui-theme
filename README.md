@@ -12,7 +12,7 @@ import React from 'react';
 import { CssBaseline, useMediaQuery } from '@material-ui/core';
 import { StylesProvider, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 
-import { darkTheme, lightTheme } from './theme';
+import { darkTheme, lightTheme } from '@squonk/mui-theme';
 
 export const App = () => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
