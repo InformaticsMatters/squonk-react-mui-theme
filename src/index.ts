@@ -1,11 +1,8 @@
-import { createTheme } from '@material-ui/core/styles';
-import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-import shadows from '@material-ui/core/styles/shadows';
-
+import { createTheme } from '@material-ui/core';
 const family = ['"Open Sans"', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif'].join(', ');
 
 export const generateThemes = () => {
-  const breakpoints = createBreakpoints({});
+  const defaultTheme = createTheme({});
 
   const commonThemeOptions = {
     palette: {
@@ -44,7 +41,7 @@ export const generateThemes = () => {
     overrides: {
       MuiAppBar: {
         root: {
-          boxShadow: shadows[1],
+          boxShadow: defaultTheme.shadows[1],
         },
       },
       MuiToolbar: {
@@ -52,7 +49,7 @@ export const generateThemes = () => {
           minHeight: 80,
         },
         regular: {
-          [breakpoints.up('xs')]: {
+          [defaultTheme.breakpoints.up('xs')]: {
             minHeight: 80,
           },
         },
@@ -60,7 +57,7 @@ export const generateThemes = () => {
       MuiTab: {
         root: {
           textTransform: 'none',
-          [breakpoints.up('xs')]: {
+          [defaultTheme.breakpoints.up('xs')]: {
             minWidth: 120,
           },
         },
