@@ -1,10 +1,25 @@
+import type { Theme as MuiTheme } from '@material-ui/core';
 import { createTheme } from '@material-ui/core';
+import { grey } from '@material-ui/core/colors';
+
+type DeepPartial<T> = {
+  [P in keyof T]?: DeepPartial<T[P]>;
+};
+
+type Theme = MuiTheme & {
+  overrides: { MuiAutocomplete: any };
+};
+
 const family = ['"Open Sans"', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif'].join(', ');
 
 export const generateThemes = () => {
-  const defaultTheme = createTheme({});
+  // Create a base theme to extend
+  const { typography, palette, shadows, breakpoints } = createTheme({
+    typography: { fontSize: 14 },
+  });
 
-  const commonThemeOptions = {
+  // Create common styles to create light & dark themes from
+  const commonThemeOptions: DeepPartial<Theme> = {
     palette: {
       primary: {
         light: 'rgba(255, 125, 102, 1)',
@@ -34,7 +49,7 @@ export const generateThemes = () => {
     overrides: {
       MuiAppBar: {
         root: {
-          boxShadow: defaultTheme.shadows[1],
+          boxShadow: shadows[1],
         },
       },
       MuiToolbar: {
@@ -42,7 +57,7 @@ export const generateThemes = () => {
           minHeight: 80,
         },
         regular: {
-          [defaultTheme.breakpoints.up('xs')]: {
+          [breakpoints.up('xs')]: {
             minHeight: 80,
           },
         },
@@ -50,7 +65,7 @@ export const generateThemes = () => {
       MuiTab: {
         root: {
           textTransform: 'none',
-          [defaultTheme.breakpoints.up('xs')]: {
+          [breakpoints.up('xs')]: {
             minWidth: 120,
           },
         },
@@ -66,9 +81,125 @@ export const generateThemes = () => {
           height: '100%',
         },
       },
+      MuiIconButton: {
+        root: {
+          '&:hover': {
+            backgroundColor: 'rgba(0, 0, 0, 0.03)',
+          },
+        },
+      },
+      MuiPaper: {
+        elevation1: {
+          boxShadow: '0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)',
+        },
+        elevation2: {
+          boxShadow: '0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)',
+        },
+      },
+      MuiTableCell: {
+        root: {
+          ...typography.body1,
+          borderBottom: `1px solid ${palette.divider}`,
+        },
+      },
+      MuiTableRow: {
+        root: {
+          '&$selected': {
+            backgroundColor: palette.background.default,
+          },
+          '&$hover': {
+            '&:hover': {
+              backgroundColor: palette.background.default,
+            },
+          },
+        },
+      },
+      MuiTypography: {
+        gutterBottom: {
+          marginBottom: 8,
+        },
+      },
+      MuiChip: {
+        sizeSmall: {
+          lineHeight: 1.3,
+        },
+      },
     },
     typography: {
+      fontSize: 14,
       fontFamily: family,
+      h1: {
+        fontFamily: family,
+        fontWeight: 600,
+        fontSize: typography.pxToRem(45),
+        lineHeight: typography.pxToRem(50),
+      },
+      h2: {
+        fontFamily: family,
+        fontWeight: 600,
+        fontSize: typography.pxToRem(29),
+        lineHeight: typography.pxToRem(32),
+      },
+      h3: {
+        fontFamily: family,
+        fontWeight: 600,
+        fontSize: typography.pxToRem(24),
+        lineHeight: typography.pxToRem(28),
+      },
+      h4: {
+        fontFamily: family,
+        fontWeight: 600,
+        fontSize: typography.pxToRem(20),
+        lineHeight: typography.pxToRem(24),
+      },
+      h5: {
+        fontFamily: family,
+        fontWeight: 600,
+        fontSize: typography.pxToRem(16),
+        lineHeight: typography.pxToRem(20),
+      },
+      h6: {
+        fontFamily: family,
+        fontWeight: 600,
+        fontSize: typography.pxToRem(14),
+        lineHeight: typography.pxToRem(20),
+      },
+      subtitle1: {
+        fontFamily: family,
+        fontSize: typography.pxToRem(16),
+        lineHeight: typography.pxToRem(25),
+      },
+      subtitle2: {
+        fontFamily: family,
+        fontWeight: 400,
+        fontSize: typography.pxToRem(14),
+        lineHeight: typography.pxToRem(21),
+      },
+      body1: {
+        fontFamily: family,
+        fontSize: '1rem',
+        lineHeight: typography.pxToRem(21),
+      },
+      body2: {
+        fontFamily: family,
+        fontSize: typography.pxToRem(12),
+        lineHeight: typography.pxToRem(18),
+      },
+      button: {
+        fontFamily: family,
+        fontSize: '1rem',
+      },
+      caption: {
+        fontFamily: family,
+        fontSize: typography.pxToRem(12),
+        lineHeight: typography.pxToRem(13),
+      },
+      overline: {
+        fontFamily: family,
+        fontSize: typography.pxToRem(12),
+        fontWeight: 500,
+        textTransform: 'uppercase',
+      },
     },
     props: {
       MuiTextField: {
@@ -84,7 +215,24 @@ export const generateThemes = () => {
       },
     },
   };
-  const darkTheme = createTheme({ palette: { type: 'dark' } }, commonThemeOptions);
+  const darkTheme = createTheme(
+    {
+      palette: { type: 'dark' },
+      overrides: {
+        MuiAutocomplete: {
+          paper: {
+            backgroundColor: grey[900],
+          },
+        },
+        MuiPaper: {
+          elevation2: {
+            backgroundColor: grey[700],
+          },
+        },
+      } as any,
+    },
+    commonThemeOptions,
+  );
   const lightTheme = createTheme(
     {
       palette: {
