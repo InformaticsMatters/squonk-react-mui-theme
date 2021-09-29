@@ -53,7 +53,13 @@
   },
   "release-it": {
     "git": {
-      "commitMessage": "chore: release v${version}"
+      "commit": true,
+      "commitMessage": "chore: release v${version}",
+      "tag": true,
+      "push": true
+    },
+    "npm": {
+      "publish": true
     }
   }
 }
