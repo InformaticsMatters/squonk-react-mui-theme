@@ -183,7 +183,7 @@ export const generateThemes = () => {
       body2: {
         fontFamily: family,
         fontSize: typography.pxToRem(12),
-        lineHeight: typography.pxToRem(18),
+        lineHeight: typography.pxToRem(20),
       },
       button: {
         fontFamily: family,
