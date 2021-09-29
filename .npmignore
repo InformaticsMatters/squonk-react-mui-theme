@@ -8,3 +8,4 @@
 tsup.config.ts
 .github
 .vscode
+.husky
