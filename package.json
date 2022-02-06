@@ -12,11 +12,12 @@
   "private": false,
   "homepage": "https://github.com/InformaticsMatters/squonk-react-mui-theme/",
   "scripts": {
+    "postinstall": "husky install",
     "build": "tsup",
     "start": "tsup --watch",
-    "type-check": "tsc --pretty --noEmit",
+    "tsc": "tsc --pretty --noEmit",
     "release": "tsup && release-it",
-    "lint": "eslint . --fix"
+    "format": "eslint . --fix"
   },
   "peerDependencies": {
     "@material-ui/core": ">4.12"
@@ -43,7 +44,7 @@
   },
   "lint-staged": {
     "*.@(js|ts|tsx)": [
-      "npm run lint"
+      "pnpm format"
     ]
   },
   "release-it": {
