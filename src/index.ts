@@ -1,13 +1,9 @@
-import type { Theme as MuiTheme } from '@material-ui/core';
-import { createTheme } from '@material-ui/core';
-import { grey } from '@material-ui/core/colors';
+import type { Theme } from '@mui/material';
+import { createTheme } from '@mui/material';
+import { grey } from '@mui/material/colors';
 
 type DeepPartial<T> = {
   [P in keyof T]?: DeepPartial<T[P]>;
-};
-
-type Theme = MuiTheme & {
-  overrides: { MuiAutocomplete: any };
 };
 
 const family = ['"Open Sans"', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif'].join(', ');
@@ -46,82 +42,105 @@ export const generateThemes = () => {
         contrastText: '#fff',
       },
     },
-    overrides: {
+    components: {
       MuiAppBar: {
-        root: {
-          boxShadow: shadows[1],
+        styleOverrides: {
+          root: {
+            boxShadow: shadows[1],
+          },
         },
       },
       MuiToolbar: {
-        root: {
-          minHeight: 80,
-        },
-        regular: {
-          [breakpoints.up('xs')]: {
+        styleOverrides: {
+          root: {
             minHeight: 80,
           },
-        },
-      },
-      MuiTab: {
-        root: {
-          textTransform: 'none',
-          [breakpoints.up('xs')]: {
-            minWidth: 120,
-          },
-        },
-        textColorInherit: {
-          opacity: 1,
-        },
-      },
-      MuiTabs: {
-        root: {
-          minHeight: 60,
-        },
-        flexContainer: {
-          height: '100%',
-        },
-      },
-      MuiIconButton: {
-        root: {
-          '&:hover': {
-            backgroundColor: 'rgba(0, 0, 0, 0.03)',
-          },
-        },
-      },
-      MuiPaper: {
-        elevation1: {
-          boxShadow: '0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)',
-        },
-        elevation2: {
-          boxShadow: '0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)',
-        },
-      },
-      MuiTableCell: {
-        root: {
-          ...typography.body1,
-          borderBottom: `1px solid ${palette.divider}`,
-        },
-      },
-      MuiTableRow: {
-        root: {
-          '&$selected': {
-            backgroundColor: palette.background.default,
-          },
-          '&$hover': {
-            '&:hover': {
-              backgroundColor: palette.background.default,
+          regular: {
+            [breakpoints.up('xs')]: {
+              minHeight: 80,
             },
           },
         },
       },
+      MuiTab: {
+        styleOverrides: {
+          root: {
+            textTransform: 'none',
+            [breakpoints.up('xs')]: {
+              minWidth: 120,
+            },
+          },
+          textColorInherit: {
+            opacity: 1,
+          },
+        },
+      },
+      MuiTabs: {
+        styleOverrides: {
+          root: {
+            minHeight: 60,
+          },
+          flexContainer: {
+            height: '100%',
+          },
+        },
+      },
+      MuiIconButton: {
+        styleOverrides: {
+          root: {
+            ':hover': {
+              backgroundColor: 'rgba(0, 0, 0, 0.03)',
+            },
+          },
+        },
+      },
+      MuiPaper: {
+        styleOverrides: {
+          elevation1: {
+            boxShadow: '0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)',
+          },
+          elevation2: {
+            boxShadow: '0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)',
+          },
+        },
+      },
+      MuiTableCell: {
+        styleOverrides: {
+          root: {
+            ...typography.body1,
+            borderBottom: `1px solid ${palette.divider}`,
+          },
+        },
+      },
       MuiTypography: {
-        gutterBottom: {
-          marginBottom: 8,
+        styleOverrides: {
+          gutterBottom: {
+            marginBottom: 8,
+          },
         },
       },
       MuiChip: {
-        sizeSmall: {
-          lineHeight: 1.3,
+        styleOverrides: {
+          sizeSmall: {
+            lineHeight: 1.3,
+          },
+        },
+      },
+      MuiTextField: {
+        defaultProps: {
+          variant: 'outlined',
+          size: 'small',
+        },
+      },
+      MuiButton: {
+        defaultProps: {
+          disableRipple: true,
+          disableFocusRipple: true,
+        },
+      },
+      MuiTooltip: {
+        defaultProps: {
+          arrow: true,
         },
       },
     },
@@ -201,42 +220,35 @@ export const generateThemes = () => {
         textTransform: 'uppercase',
       },
     },
-    props: {
-      MuiTextField: {
-        variant: 'outlined',
-        size: 'small',
-      },
-      MuiButton: {
-        disableRipple: true,
-        disableFocusRipple: true,
-      },
-      MuiTooltip: {
-        arrow: true,
-      },
-    },
   };
+
   const darkTheme = createTheme(
     {
-      palette: { type: 'dark' },
-      overrides: {
+      palette: { mode: 'dark' },
+      components: {
         MuiAutocomplete: {
-          paper: {
-            backgroundColor: grey[900],
+          styleOverrides: {
+            paper: {
+              backgroundColor: grey[900],
+            },
           },
         },
         MuiPaper: {
-          elevation2: {
-            backgroundColor: grey[700],
+          styleOverrides: {
+            elevation2: {
+              backgroundColor: grey[700],
+            },
           },
         },
-      } as any,
+      },
     },
     commonThemeOptions,
   );
+
   const lightTheme = createTheme(
     {
       palette: {
-        type: 'light',
+        mode: 'light',
         background: {
           default: '#fafafa',
         },
