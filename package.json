@@ -12,7 +12,7 @@
   "private": false,
   "homepage": "https://github.com/InformaticsMatters/squonk-react-mui-theme/",
   "scripts": {
-    "postinstall": "husky install",
+    "prepare": "husky install",
     "build": "tsup",
     "start": "tsup --watch",
     "tsc": "tsc --pretty --noEmit",
