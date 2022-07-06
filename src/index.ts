@@ -1,12 +1,12 @@
-import type { Theme } from '@mui/material';
-import { createTheme } from '@mui/material';
-import { grey } from '@mui/material/colors';
+import type { Theme } from "@mui/material";
+import { createTheme } from "@mui/material";
+import { grey } from "@mui/material/colors";
 
 type DeepPartial<T> = {
   [P in keyof T]?: DeepPartial<T[P]>;
 };
 
-const family = ['"Open Sans"', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif'].join(', ');
+const family = ["'Open Sans'", "Verdana", "Geneva", "Tahoma", "sans-serif"].join(", ");
 
 export const generateThemes = () => {
   // Create a base theme to extend
@@ -18,28 +18,28 @@ export const generateThemes = () => {
   const commonThemeOptions: DeepPartial<Theme> = {
     palette: {
       primary: {
-        light: 'rgba(255, 125, 102, 1)',
-        main: 'rgba(229, 74, 59, 1)',
-        dark: 'rgba(172, 7, 19, 1)',
-        contrastText: '#fff',
+        light: "rgba(255, 125, 102, 1)",
+        main: "rgba(229, 74, 59, 1)",
+        dark: "rgba(172, 7, 19, 1)",
+        contrastText: "#fff",
       },
       secondary: {
-        light: 'rgba(225, 255, 255, 1)',
-        main: 'rgba(175, 207, 207, 1)',
-        dark: 'rgba(127, 158, 158, 1)',
-        contrastText: '#fff',
+        light: "rgba(225, 255, 255, 1)",
+        main: "rgba(175, 207, 207, 1)",
+        dark: "rgba(127, 158, 158, 1)",
+        contrastText: "#fff",
       },
       error: {
-        light: '#e1a436',
-        main: '#cc7013',
-        dark: '#c15b0f',
-        contrastText: '#fff',
+        light: "#e1a436",
+        main: "#cc7013",
+        dark: "#c15b0f",
+        contrastText: "#fff",
       },
       success: {
-        light: '#5efc82',
-        main: '#00c853',
-        dark: '#009624',
-        contrastText: '#fff',
+        light: "#5efc82",
+        main: "#00c853",
+        dark: "#009624",
+        contrastText: "#fff",
       },
     },
     components: {
@@ -56,7 +56,7 @@ export const generateThemes = () => {
             minHeight: 80,
           },
           regular: {
-            [breakpoints.up('xs')]: {
+            [breakpoints.up("xs")]: {
               minHeight: 80,
             },
           },
@@ -65,8 +65,8 @@ export const generateThemes = () => {
       MuiTab: {
         styleOverrides: {
           root: {
-            textTransform: 'none',
-            [breakpoints.up('xs')]: {
+            textTransform: "none",
+            [breakpoints.up("xs")]: {
               minWidth: 120,
             },
           },
@@ -81,15 +81,15 @@ export const generateThemes = () => {
             minHeight: 60,
           },
           flexContainer: {
-            height: '100%',
+            height: "100%",
           },
         },
       },
       MuiIconButton: {
         styleOverrides: {
           root: {
-            ':hover': {
-              backgroundColor: 'rgba(0, 0, 0, 0.03)',
+            ":hover": {
+              backgroundColor: "rgba(0, 0, 0, 0.03)",
             },
           },
         },
@@ -97,10 +97,10 @@ export const generateThemes = () => {
       MuiPaper: {
         styleOverrides: {
           elevation1: {
-            boxShadow: '0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)',
+            boxShadow: "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)",
           },
           elevation2: {
-            boxShadow: '0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)',
+            boxShadow: "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)",
           },
         },
       },
@@ -128,8 +128,8 @@ export const generateThemes = () => {
       },
       MuiTextField: {
         defaultProps: {
-          variant: 'outlined',
-          size: 'small',
+          variant: "outlined",
+          size: "small",
         },
       },
       MuiButton: {
@@ -196,7 +196,7 @@ export const generateThemes = () => {
       },
       body1: {
         fontFamily: family,
-        fontSize: '1rem',
+        fontSize: "1rem",
         lineHeight: typography.pxToRem(21),
       },
       body2: {
@@ -206,7 +206,7 @@ export const generateThemes = () => {
       },
       button: {
         fontFamily: family,
-        fontSize: '1rem',
+        fontSize: "1rem",
       },
       caption: {
         fontFamily: family,
@@ -217,14 +217,14 @@ export const generateThemes = () => {
         fontFamily: family,
         fontSize: typography.pxToRem(12),
         fontWeight: 500,
-        textTransform: 'uppercase',
+        textTransform: "uppercase",
       },
     },
   };
 
   const darkTheme = createTheme(
     {
-      palette: { mode: 'dark' },
+      palette: { mode: "dark" },
       components: {
         MuiAutocomplete: {
           styleOverrides: {
@@ -248,9 +248,9 @@ export const generateThemes = () => {
   const lightTheme = createTheme(
     {
       palette: {
-        mode: 'light',
+        mode: "light",
         background: {
-          default: '#fafafa',
+          default: "#fafafa",
         },
       },
     },
