@@ -23,7 +23,7 @@
     "@mui/material": ">5"
   },
   "devDependencies": {
-    "@mui/material": "5.8.7",
+    "@mui/material": "5.9.1",
     "@squonk/eslint-config": "0.4.2",
     "@typescript-eslint/eslint-plugin": "5.30.5",
     "@typescript-eslint/parser": "5.30.5",
