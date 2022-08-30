@@ -25,7 +25,7 @@
   "devDependencies": {
     "@mui/material": "5.8.7",
     "@squonk/eslint-config": "0.4.2",
-    "@typescript-eslint/eslint-plugin": "5.30.5",
+    "@typescript-eslint/eslint-plugin": "5.36.1",
     "@typescript-eslint/parser": "5.30.5",
     "eslint": "8.19.0",
     "eslint-config-prettier": "8.5.0",
