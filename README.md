@@ -47,3 +47,9 @@ import { ThemeProvider } from 'styled-components';
 
 <ThemeProvider theme={theme}>{...}</ThemeProvider>
 ```
+
+# Publishing a new Version
+
+With made changes committed and pushed:
+
+1. Run `pnpm release`. This builds a `dist` with the `publishConfig` merged in.
