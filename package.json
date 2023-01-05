@@ -3,9 +3,13 @@
   "version": "3.0.1",
   "type": "module",
   "description": "MUI theme used on Squonk products",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "module": "./src/index.ts",
+  "typings": "./src/index.ts",
+  "publishConfig": {
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "typings": "./dist/index.d.ts"
+  },
   "sideEffects": false,
   "repository": "github:InformaticsMatters/squonk-react-mui-theme",
   "license": "Apache-2.0",
