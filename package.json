@@ -20,7 +20,7 @@
     "build": "tsup",
     "start": "tsup --watch",
     "tsc": "tsc --pretty --noEmit",
-    "format:all": "eslint . --fix"
+    "format:all": "eslint --fix --cache ."
   },
   "peerDependencies": {
     "@mui/material": ">5"
@@ -37,7 +37,7 @@
   },
   "lint-staged": {
     "*.@(js|ts|tsx)": [
-      "pnpm format"
+      "pnpm format:all"
     ]
   }
 }
