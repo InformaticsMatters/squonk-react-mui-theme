@@ -28,7 +28,7 @@
   "devDependencies": {
     "@mui/material": "5.8.7",
     "@squonk/eslint-config": "0.5.0",
-    "eslint": "8.19.0",
+    "eslint": "8.35.0",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
     "tslib": "2.4.0",
