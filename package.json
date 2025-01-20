@@ -27,7 +27,7 @@
     "@mui/material": ">5"
   },
   "devDependencies": {
-    "@mui/material": "5.8.7",
+    "@mui/material": "6.4.0",
     "@squonk/eslint-config": "2.1.0",
     "eslint": "8.57.1",
     "husky": "8.0.1",
@@ -38,7 +38,7 @@
   },
   "lint-staged": {
     "*.@(js|ts|tsx)": [
-      "pnpm format:all"
+      "pnpm format ."
     ]
   }
 }
