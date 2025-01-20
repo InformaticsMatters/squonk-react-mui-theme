@@ -1,12 +1,17 @@
-import type { Theme } from "@mui/material";
-import { createTheme } from "@mui/material";
+import { createTheme, type Theme } from "@mui/material";
 import { grey } from "@mui/material/colors";
 
 type DeepPartial<T> = {
   [P in keyof T]?: DeepPartial<T[P]>;
 };
 
-const family = ["'Open Sans'", "Verdana", "Geneva", "Tahoma", "sans-serif"].join(", ");
+const family = [
+  "'Open Sans'",
+  "Verdana",
+  "Geneva",
+  "Tahoma",
+  "sans-serif",
+].join(", ");
 
 export const generateThemes = () => {
   // Create a base theme to extend
@@ -97,10 +102,12 @@ export const generateThemes = () => {
       MuiPaper: {
         styleOverrides: {
           elevation1: {
-            boxShadow: "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)",
+            boxShadow:
+              "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)",
           },
           elevation2: {
-            boxShadow: "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)",
+            boxShadow:
+              "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)",
           },
         },
       },
@@ -242,7 +249,7 @@ export const generateThemes = () => {
         },
       },
     },
-    commonThemeOptions,
+    commonThemeOptions
   );
 
   const lightTheme = createTheme(
@@ -254,7 +261,7 @@ export const generateThemes = () => {
         },
       },
     },
-    commonThemeOptions,
+    commonThemeOptions
   );
 
   return { darkTheme, lightTheme };
