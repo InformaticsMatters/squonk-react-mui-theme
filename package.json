@@ -1,6 +1,6 @@
 {
   "name": "@squonk/mui-theme",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "type": "module",
   "description": "MUI theme used on Squonk products",
   "module": "./src/index.ts",

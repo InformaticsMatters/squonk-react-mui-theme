@@ -4,21 +4,17 @@ Material-UI themes for Squonk applications. Can be used independently with just 
 
 ### Material UI
 
-The correct theme for a user can be automatically set with `prefers-color-scheme`.
+The colour scheme provides both a light and a dark theme. Mui v6 will automatically switch between schemes via media queries, taking into account the users system preference.
 
 ```tsx
 import React from 'react';
 
-import { CssBaseline, useMediaQuery } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
 import { StylesProvider, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 
-import { darkTheme, lightTheme } from '@squonk/mui-theme';
+import theme from '@squonk/mui-theme';
 
 export const App = () => {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-
-  const theme = prefersDarkMode ? darkTheme : lightTheme;
-
   return (
     <StylesProvider injectFirst>
       <CssBaseline />
