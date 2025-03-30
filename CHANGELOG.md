@@ -1,3 +1,13 @@
+# [5.0.0](https://github.com/InformaticsMatters/squonk-react-mui-theme/compare/4.0.0...5.0.0) (2025-03-30)
+
+
+* feat!: update mui to v7 ([997cb3c](https://github.com/InformaticsMatters/squonk-react-mui-theme/commit/997cb3cc70aedb32fceb09a723398d7a140e8471))
+
+
+### BREAKING CHANGES
+
+* requires mui v7
+
 # [5.0.0-dev.1](https://github.com/InformaticsMatters/squonk-react-mui-theme/compare/4.0.0...5.0.0-dev.1) (2025-03-30)
 
 
