@@ -28,14 +28,14 @@
     "@mui/material": ">5"
   },
   "devDependencies": {
-    "@mui/material": "6.4.0",
+    "@mui/material": "7.0.1",
     "@squonk/eslint-config": "2.1.0",
     "eslint": "8.57.1",
     "husky": "8.0.1",
-    "lint-staged": "13.0.3",
+    "lint-staged": "15.5.0",
     "tslib": "2.8.1",
-    "tsup": "8.3.5",
-    "typescript": "5.7.3",
+    "tsup": "8.4.0",
+    "typescript": "5.8.2",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "11.0.1",
