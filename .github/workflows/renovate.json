@@ -1,0 +1,37 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "dependencyDashboardAutoclose": true,
+  "extends": [
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
+    "group:monorepos",
+    "group:recommended",
+    "workarounds:all",
+    ":pinAllExceptPeerDependencies",
+    ":semanticCommitTypeAll(chore)",
+    ":disableRateLimiting"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "constraints": {
+    "pnpm": "10"
+  },
+  "baseBranchPatterns": [
+    "dev"
+  ],
+  "minimumReleaseAge": "2 days",
+  "packageRules": [
+    {
+      "description": "Use fix for patch updates",
+      "matchUpdateTypes": ["patch"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "description": "Use feat for minor updates",
+      "matchUpdateTypes": ["minor"],
+      "semanticCommitType": "feat"
+    }
+  ]
+}
