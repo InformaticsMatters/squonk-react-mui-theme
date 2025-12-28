@@ -21,17 +21,5 @@
   "baseBranchPatterns": [
     "dev"
   ],
-  "minimumReleaseAge": "2 days",
-  "packageRules": [
-    {
-      "description": "Use fix for patch updates",
-      "matchUpdateTypes": ["patch"],
-      "semanticCommitType": "fix"
-    },
-    {
-      "description": "Use feat for minor updates",
-      "matchUpdateTypes": ["minor"],
-      "semanticCommitType": "feat"
-    }
-  ]
+  "minimumReleaseAge": "2 days"
 }
