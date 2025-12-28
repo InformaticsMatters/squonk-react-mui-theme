@@ -4,7 +4,7 @@
   "type": "module",
   "description": "MUI theme used on Squonk products",
   "sideEffects": false,
-  "repository": "github:InformaticsMatters/squonk-react-mui-theme",
+  "repositoryUrl": "https://github.com/InformaticsMatters/squonk-react-mui-theme.git",
   "license": "Apache-2.0",
   "private": false,
   "homepage": "https://github.com/InformaticsMatters/squonk-react-mui-theme/",
