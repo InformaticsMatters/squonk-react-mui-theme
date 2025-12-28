@@ -1,29 +1,42 @@
 {
-  // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
   "compilerOptions": {
-    /* Base Options: */
+    // Base Options
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "target": "es2022",
+    "verbatimModuleSyntax": true,
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    /* Strictness */
+    // Strictness
     "strict": true,
-    "noImplicitOverride": true,
-    "sourceMap": true,
-    /* AND if you're building for a library: */
-    "declaration": true,
-    /* AND if you're building for a library in a monorepo: */
-    "composite": true,
-    "declarationMap": true,
-    /* If NOT transpiling with TypeScript: */
-    "module": "preserve",
+    "noUncheckedIndexedAccess": true,
+    // If transpiling with TS
+    // "moduleResolution": "NodeNext",
+    // "module": "NodeNext",
+    // If NOT transpiling with TS
+    "moduleResolution": "bundler",
+    "module": "ESNext",
     "noEmit": true,
-    /* If your code doesn't run in the DOM: */
+    // If code runs in the DOM
     "lib": [
-      "es2022"
-    ]
-  }
+      "es2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    // If code doesn't run in the DOM
+    // "lib": [
+    //   "es2022"
+    // ]
+    /* If you're building for a library: */
+    "declaration": true,
+    /* If you're building for a library in a monorepo: */
+    // "composite": true,
+    "sourceMap": true,
+    "declarationMap": true
+  },
+  "exclude": [
+    "dist"
+  ]
 }
