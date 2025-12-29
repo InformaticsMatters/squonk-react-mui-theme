@@ -33,7 +33,9 @@
     "format": "eslint --fix --cache --max-warnings=0"
   },
   "peerDependencies": {
-    "@mui/material": ">=7.3"
+    "@mui/material": ">=7.3",
+    "@emotion/react": ">=11",
+    "@emotion/styled": ">=11"
   },
   "devDependencies": {
     "@mui/material": "7.3.6",
