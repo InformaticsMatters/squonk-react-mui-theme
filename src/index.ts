@@ -41,6 +41,7 @@ const squonkPalette = {
 
 const baseTheme = createTheme({
   cssVariables: {
+    nativeColor: true,
     colorSchemeSelector: ".mode-%s",
   },
 

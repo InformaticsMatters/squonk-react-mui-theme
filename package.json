@@ -33,10 +33,10 @@
     "format": "eslint --fix --cache --max-warnings=0"
   },
   "peerDependencies": {
-    "@mui/material": ">5"
+    "@mui/material": ">=7.3"
   },
   "devDependencies": {
-    "@mui/material": "7.0.1",
+    "@mui/material": "7.3.6",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "7.1.0",
     "@semantic-release/git": "10.0.1",
