@@ -18,7 +18,7 @@ const config = {
     [
       "@semantic-release/exec",
       {
-        publishCmd: "pnpm publish",
+        publishCmd: "pnpm publish --no-git-checks",
       },
     ],
     [
