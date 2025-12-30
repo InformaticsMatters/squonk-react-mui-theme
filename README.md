@@ -11,7 +11,7 @@ Material-UI theme for Squonk applications. Can be used independently with just M
 
 ### Material UI
 
-The colour scheme provides both a light and a dark theme. Mui v6 will automatically switch between schemes via media queries, taking into account the users system preference.
+The colour scheme provides both a light and a dark theme. Mui v7 will automatically switch between schemes via media queries, taking into account the users system preference.
 
 ```tsx
 import { CssBaseline } from '@material-ui/core';
@@ -37,14 +37,6 @@ Wrap the previous example with the theme provider from emotion.
 
 ```tsx
 import { ThemeProvider } from '@emotion/react';
-
-<ThemeProvider theme={theme}>{...}</ThemeProvider>
-```
-
-### Styled Components
-
-```tsx
-import { ThemeProvider } from 'styled-components';
 
 <ThemeProvider theme={theme}>{...}</ThemeProvider>
 ```

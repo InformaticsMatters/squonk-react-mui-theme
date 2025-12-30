@@ -3,6 +3,7 @@
  */
 const config = {
   branches: ["main", { name: "dev", channel: "dev", prerelease: "dev" }],
+  tagFormat: "${version}",
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -11,9 +12,11 @@ const config = {
       "@semantic-release/exec",
       {
         prepareCmd: "pnpm install --no-frozen-lockfile",
+        publishCmd:
+          "pnpm publish --no-git-checks --tag ${nextRelease.channel || 'latest'}",
       },
     ],
-    ["@semantic-release/npm", { npmPublish: true, provenance: true }],
+    ["@semantic-release/npm", { npmPublish: false }],
     [
       "@semantic-release/git",
       {
@@ -22,7 +25,14 @@ const config = {
           "chore: release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
-    "@semantic-release/github",
+    [
+      "@semantic-release/github",
+      {
+        releasedLabels: ["released"],
+        failCommentCondition: false,
+        successComment: false,
+      },
+    ],
   ],
 };
 

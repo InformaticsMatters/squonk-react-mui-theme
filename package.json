@@ -1,13 +1,13 @@
 {
   "name": "@squonk/mui-theme",
-  "version": "5.0.0",
+  "version": "6.0.0-dev.1",
   "type": "module",
   "description": "MUI theme used on Squonk products",
   "sideEffects": false,
-  "repositoryUrl": "https://github.com/InformaticsMatters/squonk-react-mui-theme.git",
+  "repository": "https://github.com/InformaticsMatters/squonk-react-mui-theme",
   "license": "Apache-2.0",
   "private": false,
-  "homepage": "https://github.com/InformaticsMatters/squonk-react-mui-theme/",
+  "homepage": "https://github.com/InformaticsMatters/squonk-react-mui-theme",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.cts",
@@ -22,7 +22,8 @@
         "import": "./dist/index.js"
       },
       "./package.json": "./package.json"
-    }
+    },
+    "provenance": true
   },
   "scripts": {
     "prepare": "husky install",
@@ -33,20 +34,20 @@
     "format": "eslint --fix --cache --max-warnings=0"
   },
   "peerDependencies": {
-    "@mui/material": ">5"
+    "@mui/material": ">=7.3",
+    "@emotion/react": ">=11",
+    "@emotion/styled": ">=11"
   },
   "devDependencies": {
-    "@mui/material": "7.0.1",
+    "@mui/material": "7.3.6",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "7.1.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "11.0.1",
-    "@semantic-release/npm": "12.0.1",
     "@squonk/eslint-config": "3.0.0",
     "eslint": "9.25.1",
     "husky": "8.0.1",
     "lint-staged": "15.5.0",
-    "semantic-release": "24.2.3",
+    "semantic-release": "25.0.2",
     "tsdown": "0.18.3",
     "tslib": "2.8.1",
     "typescript": "5.8.2"
