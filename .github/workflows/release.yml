@@ -51,6 +51,6 @@ jobs:
         uses: cycjimmy/semantic-release-action@v6
         id: semantic
         env:
-          NPM_TOKEN: "dummy"
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           SEMANTIC_RELEASE_DEBUG: true
