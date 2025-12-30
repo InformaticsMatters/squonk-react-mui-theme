@@ -1,6 +1,6 @@
 {
   "name": "@squonk/mui-theme",
-  "version": "6.0.0-dev.1",
+  "version": "6.0.0",
   "type": "module",
   "description": "MUI theme used on Squonk products",
   "sideEffects": false,
