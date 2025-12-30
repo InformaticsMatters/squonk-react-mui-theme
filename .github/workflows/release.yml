@@ -45,6 +45,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build package
+        run: pnpm build
+
       - uses: actions/create-github-app-token@v2
         id: app-token
         with:
