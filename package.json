@@ -22,8 +22,7 @@
         "import": "./dist/index.js"
       },
       "./package.json": "./package.json"
-    },
-    "provenance": true
+    }
   },
   "scripts": {
     "prepare": "husky install",
