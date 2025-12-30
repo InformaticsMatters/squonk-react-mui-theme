@@ -42,8 +42,6 @@ jobs:
       - name: Upgrade npm to latest
         run: npm install -g npm@latest
 
-      - run: npm --version
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -59,3 +57,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           SEMANTIC_RELEASE_DEBUG: true
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
