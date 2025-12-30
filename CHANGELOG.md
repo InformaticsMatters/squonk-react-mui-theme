@@ -1,3 +1,18 @@
+# [6.0.0-dev.1](https://github.com/InformaticsMatters/squonk-react-mui-theme/compare/5.0.0...6.0.0-dev.1) (2025-12-30)
+
+
+* perf!: enable native colour in theme ([d93d059](https://github.com/InformaticsMatters/squonk-react-mui-theme/commit/d93d05988cc9751c7cbf0ff04bd7b4b4d78ba962))
+
+
+### Bug Fixes
+
+* add @emotion/react and @emotion/styled as peer dependencies in package.json to fix transpilation issue ([442856e](https://github.com/InformaticsMatters/squonk-react-mui-theme/commit/442856e290f3e23eb8a0b9e1a52c4f7840427181))
+
+
+### BREAKING CHANGES
+
+* @mui/material >= 7.3 is now required
+
 # [5.0.0](https://github.com/InformaticsMatters/squonk-react-mui-theme/compare/4.0.0...5.0.0) (2025-03-30)
 
 
