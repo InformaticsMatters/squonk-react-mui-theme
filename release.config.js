@@ -26,7 +26,7 @@ const config = {
       "@semantic-release/github",
       {
         releasedLabels: ["released"],
-        failComment: false,
+        failCommentCondition: false,
         successComment: false,
       },
     ],
