@@ -3,6 +3,7 @@
  */
 const config = {
   branches: ["main", { name: "dev", channel: "dev", prerelease: "dev" }],
+  tagFormat: "${version}",
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
