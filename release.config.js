@@ -14,7 +14,13 @@ const config = {
         prepareCmd: "pnpm install --no-frozen-lockfile",
       },
     ],
-    ["@semantic-release/npm", { npmPublish: true, provenance: true }],
+    ["@semantic-release/npm", { npmPublish: false }],
+    [
+      "@semantic-release/exec",
+      {
+        publishCmd: "pnpm publish",
+      },
+    ],
     [
       "@semantic-release/git",
       {
