@@ -12,15 +12,11 @@ const config = {
       "@semantic-release/exec",
       {
         prepareCmd: "pnpm install --no-frozen-lockfile",
+        publishCmd:
+          "pnpm publish --no-git-checks --tag ${nextRelease.channel || 'latest'}",
       },
     ],
     ["@semantic-release/npm", { npmPublish: false }],
-    [
-      "@semantic-release/exec",
-      {
-        publishCmd: "pnpm publish --no-git-checks",
-      },
-    ],
     [
       "@semantic-release/git",
       {
