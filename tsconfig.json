@@ -4,7 +4,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "target": "es2025",
+    "target": "esnext",
     "verbatimModuleSyntax": true,
     "allowJs": true,
     "resolveJsonModule": true,
@@ -21,7 +21,7 @@
     "noEmit": true,
     // If code runs in the DOM
     "lib": [
-      "es2025",
+      "ESNext",
       "DOM"
     ],
     // If code doesn't run in the DOM
