@@ -83,9 +83,6 @@ const baseTheme = createTheme({
         root: {
           minHeight: 60,
         },
-        flexContainer: {
-          height: "100%",
-        },
       },
     },
     MuiIconButton: {
