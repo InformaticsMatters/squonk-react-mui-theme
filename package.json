@@ -34,12 +34,12 @@
     "format": "eslint --fix --cache --max-warnings=0"
   },
   "peerDependencies": {
-    "@mui/material": ">=7.3",
+    "@mui/material": ">=8.0",
     "@emotion/react": ">=11",
     "@emotion/styled": ">=11"
   },
   "devDependencies": {
-    "@mui/material": "7.3.6",
+    "@mui/material": "9.0.1",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "7.1.0",
     "@semantic-release/git": "10.0.1",
