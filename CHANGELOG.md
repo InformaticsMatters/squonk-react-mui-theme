@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/InformaticsMatters/squonk-react-mui-theme/compare/6.0.0...6.0.1) (2026-05-11)
+
+
+### Bug Fixes
+
+* support mui v9 ([a60a5e3](https://github.com/InformaticsMatters/squonk-react-mui-theme/commit/a60a5e3f00df7701e6db6a935fae25fe763d8e48))
+
 # [6.0.0](https://github.com/InformaticsMatters/squonk-react-mui-theme/compare/5.0.0...6.0.0) (2025-12-30)
 
 
