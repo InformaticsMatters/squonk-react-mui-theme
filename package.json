@@ -25,6 +25,9 @@
     },
     "provenance": true
   },
+  "engines": {
+    "node": ">=22.22.2"
+  },
   "scripts": {
     "prepare": "husky install",
     "build": "tsdown",
