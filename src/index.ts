@@ -1,16 +1,8 @@
 import { createTheme } from "@mui/material";
 
-const family = [
-  "'Open Sans'",
-  "Verdana",
-  "Geneva",
-  "Tahoma",
-  "sans-serif",
-].join(", ");
+const family = ["'Open Sans'", "Verdana", "Geneva", "Tahoma", "sans-serif"].join(", ");
 
-const { breakpoints, shadows, palette, typography } = createTheme({
-  typography: { fontSize: 14 },
-});
+const { breakpoints, shadows, palette, typography } = createTheme({ typography: { fontSize: 14 } });
 
 const squonkPalette = {
   primary: {
@@ -25,126 +17,47 @@ const squonkPalette = {
     dark: "rgba(127, 158, 158, 1)",
     contrastText: "#fff",
   },
-  error: {
-    light: "#e1a436",
-    main: "#cc7013",
-    dark: "#c15b0f",
-    contrastText: "#fff",
-  },
-  success: {
-    light: "#5efc82",
-    main: "#00c853",
-    dark: "#009624",
-    contrastText: "#fff",
-  },
+  error: { light: "#e1a436", main: "#cc7013", dark: "#c15b0f", contrastText: "#fff" },
+  success: { light: "#5efc82", main: "#00c853", dark: "#009624", contrastText: "#fff" },
 };
 
 const baseTheme = createTheme({
-  cssVariables: {
-    nativeColor: true,
-    colorSchemeSelector: ".mode-%s",
-  },
+  cssVariables: { nativeColor: true, colorSchemeSelector: ".mode-%s" },
 
   components: {
-    MuiAppBar: {
-      styleOverrides: {
-        root: {
-          boxShadow: shadows[1],
-        },
-      },
-    },
+    MuiAppBar: { styleOverrides: { root: { boxShadow: shadows[1] } } },
     MuiToolbar: {
       styleOverrides: {
-        root: {
-          minHeight: 80,
-        },
-        regular: {
-          [breakpoints.up("xs")]: {
-            minHeight: 80,
-          },
-        },
+        root: { minHeight: 80 },
+        regular: { [breakpoints.up("xs")]: { minHeight: 80 } },
       },
     },
     MuiTab: {
       styleOverrides: {
-        root: {
-          textTransform: "none",
-          [breakpoints.up("xs")]: {
-            minWidth: 120,
-          },
-        },
-        textColorInherit: {
-          opacity: 1,
-        },
+        root: { textTransform: "none", [breakpoints.up("xs")]: { minWidth: 120 } },
+        textColorInherit: { opacity: 1 },
       },
     },
-    MuiTabs: {
-      styleOverrides: {
-        root: {
-          minHeight: 60,
-        },
-      },
-    },
+    MuiTabs: { styleOverrides: { root: { minHeight: 60 } } },
     MuiIconButton: {
-      styleOverrides: {
-        root: {
-          ":hover": {
-            backgroundColor: "rgba(0, 0, 0, 0.03)",
-          },
-        },
-      },
+      styleOverrides: { root: { ":hover": { backgroundColor: "rgba(0, 0, 0, 0.03)" } } },
     },
     MuiPaper: {
       styleOverrides: {
-        elevation1: {
-          boxShadow:
-            "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)",
-        },
-        elevation2: {
-          boxShadow:
-            "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)",
-        },
+        elevation1: { boxShadow: "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)" },
+        elevation2: { boxShadow: "0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15)" },
       },
     },
     MuiTableCell: {
       styleOverrides: {
-        root: {
-          ...typography.body1,
-          borderBottom: `1px solid ${palette.divider}`,
-        },
+        root: { ...typography.body1, borderBottom: `1px solid ${palette.divider}` },
       },
     },
-    MuiTypography: {
-      styleOverrides: {
-        gutterBottom: {
-          marginBottom: 8,
-        },
-      },
-    },
-    MuiChip: {
-      styleOverrides: {
-        sizeSmall: {
-          lineHeight: 1.3,
-        },
-      },
-    },
-    MuiTextField: {
-      defaultProps: {
-        variant: "outlined",
-        size: "small",
-      },
-    },
-    MuiButton: {
-      defaultProps: {
-        disableRipple: true,
-        disableFocusRipple: true,
-      },
-    },
-    MuiTooltip: {
-      defaultProps: {
-        arrow: true,
-      },
-    },
+    MuiTypography: { styleOverrides: { gutterBottom: { marginBottom: 8 } } },
+    MuiChip: { styleOverrides: { sizeSmall: { lineHeight: 1.3 } } },
+    MuiTextField: { defaultProps: { variant: "outlined", size: "small" } },
+    MuiButton: { defaultProps: { disableRipple: true, disableFocusRipple: true } },
+    MuiTooltip: { defaultProps: { arrow: true } },
   },
 
   typography: {
@@ -197,20 +110,13 @@ const baseTheme = createTheme({
       fontSize: typography.pxToRem(14),
       lineHeight: typography.pxToRem(21),
     },
-    body1: {
-      fontFamily: family,
-      fontSize: "1rem",
-      lineHeight: typography.pxToRem(21),
-    },
+    body1: { fontFamily: family, fontSize: "1rem", lineHeight: typography.pxToRem(21) },
     body2: {
       fontFamily: family,
       fontSize: typography.pxToRem(12),
       lineHeight: typography.pxToRem(20),
     },
-    button: {
-      fontFamily: family,
-      fontSize: "1rem",
-    },
+    button: { fontFamily: family, fontSize: "1rem" },
     caption: {
       fontFamily: family,
       fontSize: typography.pxToRem(12),
@@ -226,21 +132,8 @@ const baseTheme = createTheme({
 
   // Color scheme specific configurations
   colorSchemes: {
-    light: {
-      palette: {
-        mode: "light",
-        background: {
-          default: "#fafafa",
-        },
-        ...squonkPalette,
-      },
-    },
-    dark: {
-      palette: {
-        mode: "dark",
-        ...squonkPalette,
-      },
-    },
+    light: { palette: { mode: "light", background: { default: "#fafafa" }, ...squonkPalette } },
+    dark: { palette: { mode: "dark", ...squonkPalette } },
   },
 });
 
