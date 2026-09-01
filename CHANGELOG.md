@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/InformaticsMatters/squonk-react-mui-theme/compare/6.0.1...6.1.0) (2026-09-01)
+
+
+### Features
+
+* draw a focus ring around whatever the keyboard is standing on ([831e874](https://github.com/InformaticsMatters/squonk-react-mui-theme/commit/831e874aa89897d40f810b192b29f5fd91cf6898))
+
 ## [6.0.1](https://github.com/InformaticsMatters/squonk-react-mui-theme/compare/6.0.0...6.0.1) (2026-05-11)
 
 
